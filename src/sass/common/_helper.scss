@@ -1,0 +1,26 @@
+//-----------------//
+      //helper//
+//-----------------//
+
+.u-inner{
+  width: 80%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+
+.hp_fontPrata{ font-family: 'Prata', serif !important;}
+
+.hp_fontMincyo{ font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif !important;}
+
+.hp_fontGothic{ font-family: "游ゴシック Medium" , "YuGothic" , "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo , sans-serif !important;}

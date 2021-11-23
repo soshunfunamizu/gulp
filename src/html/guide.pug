@@ -1,0 +1,214 @@
+extends _layout.pug
+block var
+  - metas = {}
+  - metas.title = 'title'
+  - metas.url = 'url'
+  - metas.image = 'image'
+  - metas.site_name = 'site_name'
+  - metas.description = 'description'
+  - var slug = 'index'
+block append meta
+  +meta(metas)
+  include common/_inc_meta_facebook
+  +inc_meta_facebook(metas)
+block title
+  title
+block body
+
+block PageContent
+  main.l-main
+    .l-main__container.__guide 
+      include layout/_side.pug
+      .l-main__area.__guide
+        section.p-page__hero 
+          .p-page__hero__inner 
+            .p-page__hero__visual.__guide 
+              .p-page__hero__img(style="background-image: url(../img/guide/guide_hero.jpg)") 
+                - var PageTitle = 'ご利用ガイド'
+                  h2.p-page__hero__title #{PageTitle}
+        
+        section.p-page__info 
+          .p-page__info__inner  
+            ul.p-page__info__list 
+              li.p-page__info__item
+                a(href="#guide-delivery") 配送・送料について
+              li.p-page__info__item
+                a(href="#guide-pay") お支払い方法について
+              li.p-page__info__item
+                a(href="#guide-cancel") 返品・キャンセルについて
+              li.p-page__info__item
+                a(href="#guide-gift") ギフト包装・梱包・熨斗について
+
+        section.p-guide__delivery#guide-delivery 
+          .p-guide__delivery__inner  
+            .p-guide__delivery__texts 
+              h2.p-guide__main__title 配送・送料について
+              p.p-guide__text お届け方法は、
+                span.__red 「宅配業者による配達」
+                |もしくは
+                span.__red 「工場直送便」
+                |にてお届け致します。
+                br
+                |お届け先が
+                span.__red 配達エリア内
+                |で、
+                span.__red 配達日時が一致
+                |した場合のみ、「工場直送便」でお届けいたします。
+                br
+                |それ以外は宅配業者の配達となりますので、あらかじめご了承ください。
+
+            .p-guide__delivery__texts 
+              h3.p-guide__sub__title お届け日数について
+              p.p-guide__text なまものにつき、ご注文をいただいてから加工するため、2～5営業日で発送・お届け致します。（お届け日数は地域によって異なります）
+                br
+                |ただし、ご注文が集中した場合はお届けが遅れる場合がございます。
+                br
+                |その際は、お電話またはメールにてご連絡申し上げます。
+                br
+                |もし、7日以上たっても商品が届かない場合は、お電話またはお問合せフォームよりご連絡下さい。
+
+            .p-guide__delivery__texts
+              h3.p-guide__sub__title 宅配業者による配達について
+              .p-guide__sub__texts 
+                h4.p-guide__text.__bold 配達業者
+                p.p-guide__text.__upper-narrow 佐川急便
+              .p-guide__sub__texts 
+                h4.p-guide__text.__bold 配達日時指定について
+                p.p-guide__text.__upper-narrow 配送日の指定を承っております。
+                  br
+                  |その場合、ご注文から2日後以降の指定とさせていただいておりますので、ご了承ください。
+                  br
+                  |また、配送時間の指定も承っております。「午前」または「午後」のいずれかでお選び下さい。
+              .p-guide__sub__texts.p-guide__delivery__area 
+                h4.p-guide__text.__bold 送料
+                table.p-guide__delivery__table 
+                  tbody
+                    tr
+                      th エリア
+                      td クール宅配便料金
+                    tr
+                      th
+                        | 北陸・関西・東海
+                        br
+                        | 信越・関東
+                      td.__yen 800円
+                    tr
+                      th 四国・中国・東北
+                      td.__yen 900円
+                    tr
+                      th 九州
+                      td.__yen 1,000円
+                    tr
+                      th 北海道・沖縄
+                      td.__yen 1,700円
+                .p-guide__delivery__caution 
+                  p.p-guide__delivery__caution__text ※1回のご注文で総重量が5kgを超える場合は、送料が変わりますのでご相談下さい。
+                  p.p-guide__delivery__caution__text ※上記料金には、クール宅配便の料金が含まれています。
+
+              .p-guide__delivery__texts 
+                h3.p-guide__sub__title 工場直送便による配達について
+              .p-guide__sub__texts 
+                h4.p-guide__text.__bold 配達業者
+                p.p-guide__text.__upper-narrow コリヤンハウス精肉総合食材工場のトラックで配達致します。
+              .p-guide__sub__texts 
+                h4.p-guide__text.__bold 配達日時指定について
+                p.p-guide__text.__upper-narrow-middle 配送日の指定を承っておりますが、時間の指定は出来ません。
+                p.p-guide__text.__upper-narrow-none 配送日の指定は、ご注文から2日後以降の指定とさせていただいておりますので、ご了承ください。
+                  br
+                  |配達エリアによって配達曜日が異なりますので、詳しくは下記の「配達エリア」をご参照下さい。
+                  br
+                  |お住まいの地域が何曜日の配達かご確認いただき、その曜日でのご注文をお願い致します。
+                  br
+                  |「指定曜日以外でのご注文」の場合は、「宅配業者による配達」となります。
+
+              .p-guide__sub__texts 
+                h4.p-guide__text.__bold 送料
+                table.p-guide__delivery__table__secondary
+                  tbody
+                    tr
+                      th.__area(colspan='2') 配達エリア
+                      th.__day 配達曜日
+                      th.__period 注文締切時間
+                    tr
+                      td.__prefecture.__isikawa(rowspan='3') 石川県
+                      td.__isikawa_area.__big
+                        | 金沢市内・野々市市・白山市松
+                        br
+                        |任
+                      td.__day__area
+                        | 営業日通り
+                        br
+                        span.__attention 定休日：日曜、水曜
+                          br
+                          |(祝日のある週の水曜は営業)
+ 
+                      td.__period__area(rowspan='3') 前日の17:00まで
+                    tr
+                      td.__isikawa_area 七尾市
+                      td.__day__area 毎週火曜日
+                    tr
+                      td.__isikawa_area.__middle 白山市一里野
+                      td.__day__area 毎週木曜日
+                        br
+                        span.__attention (冬季は毎週月・火・金曜日)
+                    tr
+                      td.__prefecture.__toyama 富山県
+                      td.__toyama_area 砺波市・小矢部市・南砺市
+                      td.__day__area 営業日通り
+                        br
+                        span.__attention 定休日：日曜、水曜
+                          br
+                          | (祝日のある週の水曜は営業)
+                      td.__period__area 前日の17:00まで
+
+        section.p-guide__pay#guide-pay
+          .p-guide__pay__inner
+            .p-guide__delivery__texts 
+              h2.p-guide__main__title お支払い方法について
+            .p-guide__delivery__texts 
+              h3.p-guide__sub__title 商品代引き
+              p.p-guide__text 代金引換（代引き）のみご利用いただけます。
+                br
+                |代金引換手数料は、
+                br
+                |「宅配業者による配達」の場合、一律315円。
+                br
+                |「工場直送トラック便」の場合、無料です。
+            .p-guide__delivery__texts
+              h4.p-guide__sub__title クレジット
+              img.p-guide__cregit__visual(src="../img/guide/cregit.jpg", alt="")
+              p.p-guide__text.__upper-narrow VISA/MASTER/DINERS/JCB/AMEXに対応しており、上記マークが入っているクレジットカードはすべてご利用になれます。
+
+        section.p-guide__cancel#guide-cancel 
+          .p-guide__cancel__inner      
+            .p-guide__delivery__texts 
+              h2.p-guide__main__title 返品・キャンセルについて
+            .p-guide__sub__texts
+              p.p-guide__text 生鮮食品のため原則としてお客様のご都合による返品・交換は致しかねますのでご容赦ください。
+            .p-guide__delivery__texts.__upper__wide 
+              h3.p-guide__sub__title 返品・交換
+              p.p-guide__text.__upper-narrow 仮) 商品の品質には万全を期していますが、万一商品に問題がある場合には商品到着後3日以内にご連絡ください。
+                br
+                |送料当店負担にて良品と即交換させていただきます。
+                br
+                |商品到着後、3日以内にご連絡がない場合、商品の返品・交換はお受けしておりませんので予めご了承ください。
+            .p-guide__delivery__texts
+              h3.p-guide__sub__title キャンセル
+              p.p-guide__text.__upper-narrow 仮) キャンセルは発送日前日まで承っております。
+
+        section.p-guide__gift#guide-gift 
+          .p-guide__gift__inner 
+            .p-guide__delivery__texts 
+              h2.p-guide__main__title ギフト包装・梱包・熨斗について
+            .p-guide__delivery__texts.__upper-narrow 
+              h3.p-guide__sub__title ラッピングについて
+              p.p-guide__text.__upper-narrow ご希望の場合は、カート精算ページにてご選択下さい。
+            .p-guide__delivery__texts
+              h3.p-guide__sub__title 熨斗について
+              p.p-guide__text.__upper-narrow 用途に応じてお選び頂けます。カート精算ページにて熨斗の種類をお選びください。
+                br
+                |表書き・名入れの指定については以下を参照の上、カート生産ページの「備考欄」へご記入ください。
+              p.p-guide__text.__upper-narrow <記入例>
+                br
+                |内祝い / 花子
+

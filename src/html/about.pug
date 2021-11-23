@@ -1,0 +1,134 @@
+extends _layout
+block var
+  - metas = {}
+  - metas.title = 'title'
+  - metas.url = 'url'
+  - metas.image = 'image'
+  - metas.site_name = 'site_name'
+  - metas.description = 'description'
+  - var slug = 'index'
+block append meta
+  +meta(metas)
+  include common/_inc_meta_facebook
+  +inc_meta_facebook(metas)
+block title
+  title
+block body
+
+block PageContent
+  main.l-main
+    .l-main__container.__about
+      include layout/_side.pug
+      .l-main__area.__guide 
+        section.p-page__hero 
+          .p-page__hero__inner 
+            .p-page__hero__visual.__about 
+              .p-page__hero__img(style="background-image: url(../img/about/about_hero.jpg)") 
+                - var PageTitle = 'コリヤンハウスについて'
+                  h2.p-page__hero__title #{PageTitle}
+
+        section.p-about__intro 
+          p.p-about__intro__text 新鮮で美味しいお肉を、圧倒的な品揃えとお手頃価格でご提供！直営の焼肉店の他、
+            br
+            |ホテルや飲食店へも卸売の実績をもつコリヤンハウスのお肉をぜひお楽しみください！
+
+        section.p-page__info.__about 
+          .p-page__info__inner  
+            ul.p-page__info__list 
+              li.p-page__info__item
+                a(href="#about-commitment") コリヤンハウスのこだわり
+              li.p-page__info__item
+                a(href="#about-company") 会社概要
+              li.p-page__info__item
+                a(href="#about-desc") 店舗情報
+        section.p-about__commitment#about-commitment
+          .p-about__commitment__inner 
+            h2.p-about__title コリヤンハウスのこだわり 
+            .p-about__commitment__content 
+              .p-about__commitment__texts
+                h3.p-about__commitment__texts__title
+                  span.__number 1
+                  |仮)バツグンの
+                  span.__strong 味
+                  |と
+                  span.__strong 鮮度
+                  |！
+                p.p-about__commitment__texts__text 厳選したお肉を、さらに丁寧に処理しているから味と鮮度はバツグン！
+                  br
+                  |ご自宅用に、ギフトに。こだわりぬいた当店自慢のお肉をぜひご堪能ください。
+              .p-about__commitment__visual 
+                img(src="../img/about/kodawari1.jpg", alt="")
+            .p-about__commitment__content 
+              .p-about__commitment__texts
+                h3.p-about__commitment__texts__title
+                  span.__number 2
+                  |仮)圧倒的な
+                  span.__strong お手頃
+                  |価格！
+                p.p-about__commitment__texts__text 美味しいお肉を気軽に楽しんでいただきたいから、お手頃価格。
+                  br
+                  |さらに嬉しい、100gからのちょっぴりサイズ。お好みの組み合わせを
+                  br
+                  |見つけてみてください。
+              .p-about__commitment__visual 
+                img(src="../img/about/kodawari2.jpg", alt="")
+            .p-about__commitment__content 
+              .p-about__commitment__texts
+                h3.p-about__commitment__texts__title
+                  span.__number 3
+                  |仮)
+                  span.__strong 豊富
+                  |な品揃え！
+                p.p-about__commitment__texts__text 定番のお肉はもちろん、シロやハチノスのホルモンなど、他の精肉店にはめずらしい豊富な品揃え。
+                  br
+                  |さらにおつまみに韓国食材や、焼肉のタレまで、全て揃うからご自宅での焼肉や
+                  br
+                  |BBQにもオススメです。
+              .p-about__commitment__visual 
+                img(src="../img/about/kodawari3.jpg", alt="")
+
+
+        section.p-about__company#about-company 
+          h2.p-about__title 会社概要
+          table.p-about__company__table
+            tbody
+              tr
+                th 社名
+                td 株式会社コリヤンハウス 
+              tr
+                th 代表者
+                td 山下 富満
+              tr
+                th 所在地
+                td
+                  | 〒920-0025
+                  br
+                  | 石川県金沢市駅西本町4丁目3番5号
+              tr
+                th TEL / FAX
+                td TEL: 076-232-5333
+              tr
+                th 事業内容
+                td 仮)食肉加工、食肉卸売、焼肉店運営
+              tr
+                th 設立
+                td 1988年7日
+
+        section.p-about__desc#about-desc 
+          h2.p-about__title 店舗情報
+          .p-about__desc__content 
+            .p-about__desc__content__visual 
+              .__img 
+            .p-about__desc__content__texts 
+              h3.p-about__desc__texts__title コリヤンハウス精肉総合食材工場
+              p.p-about__desc__text 〒920-0025　石川県金沢市駅西本町4丁目3番5号
+              p.p-about__desc__text 電話番号 : 
+                span.__bold 076-232-5333
+              p.p-about__desc__text ファックス : 
+                span.__bold 076-231-7632
+              p.p-about__desc__text 営業時間 : 
+                span.__bold 6:00〜17:00　
+              p.p-about__desc__text 定休日 : 
+                span.__bold 日曜・水曜 (祝日のある水曜は営業)
+          .p-about__desc__map 
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51274.06194232945!2d136.57744696761324!3d36.563060549223586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8334ef5b597df%3A0x18869b75ca730d86!2z77yI5qCq77yJ44Kz44Oq44Ok44Oz44OP44Km44K5!5e0!3m2!1sja!2sjp!4v1636959062316!5m2!1sja!2sjp", frameborder="0") 

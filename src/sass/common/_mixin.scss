@@ -1,0 +1,58 @@
+//-----------------//
+      //mixin//
+//-----------------//
+
+
+//centering
+@mixin abs_center_w{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+
+@mixin abs_center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+  //clearfix
+@mixin clearfix{
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+
+@mixin hoveropc{
+  transition: all .2s ease-out;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+@mixin hoveropc_arrow{
+  transition: all .2s ease-out;
+  span.solo-arrow{
+    transition: all .2s ease-out;
+    right: 1.8rem;
+  }
+  &:hover{
+    opacity: 0.7;
+    span.solo-arrow{
+      right: 0.8rem;
+    }
+  }
+}
+

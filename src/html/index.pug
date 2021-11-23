@@ -1,0 +1,254 @@
+extends _layout
+block var
+  - metas = {}
+  - metas.title = 'title'
+  - metas.url = 'url'
+  - metas.image = 'image'
+  - metas.site_name = 'site_name'
+  - metas.description = 'description'
+  - var slug = 'index'
+block append meta
+  +meta(metas)
+  include common/_inc_meta_facebook
+  +inc_meta_facebook(metas)
+block title
+  title
+block body
+
+block PageContent
+  main.l-main
+    include layout/_hero.pug
+    .l-main__container 
+      include layout/_side.pug
+      .l-main__area
+        section.p-news#news 
+          .p-news__inner
+            ul.p-news__list 
+              li.p-news__item 
+                a.p-news__link(href="#")
+                  span.p-news__date 2021.09.01
+                  span.p-news__content 石川県産いのしし肉取り扱い開始！
+              li.p-news__item 
+                a.p-news__link(href="#")
+                  span.p-news__date 2021.09.01
+                  span.p-news__content 石川県産いのしし肉取り扱い開始！
+              li.p-news__item 
+                a.p-news__link(href="#")
+                  span.p-news__date 2021.09.01
+                  span.p-news__content 石川県産いのしし肉取り扱い開始！
+
+        section.p-catch#catch 
+          .p-catch__inner 
+            .p-catch__title 
+              .p-catch__title__secondary
+
+                span.p-catch__title__secondary__text.c-square.__green 迷
+
+                span.p-catch__title__secondary__text.c-square.__green っ
+
+                span.p-catch__title__secondary__text.c-square.__green た
+
+                span.p-catch__title__secondary__text.c-square.__green ら
+
+                span.p-catch__title__secondary__text.c-square.__green こ
+
+                span.p-catch__title__secondary__text.c-square.__green れ
+
+                span.p-catch__title__secondary__text.c-square.__green !  
+
+                h4.p-catch__sub__title 人気ランキング
+              h3.p-catch__title__main TOP
+                span.p-catch__title__main__big 3
+
+          .p-catch__visual 
+            img(src="../img/yakiniku.png", alt="")
+
+        section.l-ranking#ranking 
+          .p-ranking__inner 
+            ul.p-ranking__list 
+              li.p-merchandise__item 
+                .p-merchandise__item__crown( style="background-image: url(../img/crown_gold.png)") 1 
+                .p-merchandise__item__visual 
+                  .__img( style="background-image: url(../img/ranking1.jpg)") 
+                .p-merchandise__item__name 商品名が入ります
+                .p-merchandise__item__sale 3,300円(税込)
+              li.p-merchandise__item 
+                .p-merchandise__item__crown( style="background-image: url(../img/crown_silver.png)") 2
+                .p-merchandise__item__visual 
+                  .__img( style="background-image: url(../img/ranking2.jpg)") 
+                .p-merchandise__item__name 商品名が入ります
+                .p-merchandise__item__sale 3,300円(税込)
+              li.p-merchandise__item 
+                .p-merchandise__item__crown( style="background-image: url(../img/crown_brown.png)") 3
+                .p-merchandise__item__visual 
+                  .__img( style="background-image: url(../img/ranking3.png)") 
+                .p-merchandise__item__name 商品名が入ります
+                .p-merchandise__item__sale 3,300円(税込)
+          a.c-link(href="#") 商品一覧を見る
+            span.c-link__next 
+              img(src="../img/arrow.svg", alt="")
+
+
+        section.l-new#new 
+          .p-new__bg 
+            p.p-new__bg__title 맛있는 고기 맛
+          .p-new__inner 
+            .p-new__inner__wrapper 
+              ul.p-new__list 
+                li.p-merchandise__item.__lage 
+                  .p-new__info.__small( style="background-image: url(../img/asetts.png)") 
+                    span NEW!  
+                  .p-merchandise__item__visual 
+                    .__img( style="background-image: url(../img/ranking1.jpg)") 
+                  .p-merchandise__item__name 商品名が入ります
+                  .p-merchandise__item__sale 3,300円(税込)
+                li.p-merchandise__item.__lage
+                  .p-new__info.__small( style="background-image: url(../img/asetts.png)")
+                    span NEW!  
+                  .p-merchandise__item__visual 
+                    .__img( style="background-image: url(../img/ranking2.jpg)") 
+                  .p-merchandise__item__name 商品名が入ります
+                  .p-merchandise__item__sale 3,300円(税込)
+                li.p-new__title 
+                  h2.__title 
+                    span.p-new__info.__medium 
+                      img(src="../img/new.png", alt="")
+                    |着商品
+            a.c-link(href="#") 商品一覧を見る
+              span.c-link__next 
+                img(src="../img/arrow.svg", alt="")
+
+
+        section.l-gift#gift 
+          .p-gift__visual
+            .p-gift__visual__inner 
+              .p-gift__texts
+                p.__text.__strong ぜ
+                p.__text.__strong ひ
+                p.__text.__strong お
+                p.__text.__strong 試
+                p.__text.__strong し
+                p.__text.__strong あ
+                p.__text.__strong れ
+                p.__text !
+              .p-gift__visual__img 
+                img(src="../img/usi.png", alt="")
+          .p-gift__inner 
+            .p-gift__inner__wrapper 
+              .p-gift__sub__title 
+                h3.__title お歳暮や誕生日などのお祝いに！
+              .p-gift__main__title 
+                h2.__title 
+                  span.p-gift__main__title__strong.c-square.__red 厳
+                  span.p-gift__main__title__strong.c-square.__red 選
+                  |おすすめギフト
+            ul.p-gift__list 
+              li.p-merchandise__item 
+                .p-merchandise__item__visual 
+                  .__img( style="background-image: url(../img/gift.png)")  
+                .p-merchandise__item__name 商品名が入ります
+                .p-merchandise__item__sale 3,300円(税込)
+              li.p-merchandise__item  
+                .p-merchandise__item__visual 
+                  .__img( style="background-image: url(../img/ranking3.png)")  
+                .p-merchandise__item__name 商品名が入ります
+                .p-merchandise__item__sale 3,300円(税込)
+              li.p-merchandise__item  
+                .p-merchandise__item__visual 
+                  .__img( style="background-image: url(../img/gift.png)")  
+                .p-merchandise__item__name 商品名が入ります
+                .p-merchandise__item__sale 3,300円(税込)
+          a.c-link(href="#") 商品一覧を見る
+            span.c-link__next 
+              img(src="../img/arrow.svg", alt="")
+          include layout/_cookie.pug
+        section.l-scene#scene 
+          .p-scene__inner 
+            .p-scene__inner__wrapper 
+              .p-scene__heading 
+                h3.p-scene__sub__title 様々なシーンでお選びいただけます！
+                h2.p-scene__main__title 
+                  span.p-scene__main__title__strong.c-square.__mix ギフト包装 
+                  |・ 
+                  span.p-scene__main__title__strong.__small.c-square.__mix 梱包
+                  |  について
+              .p-scene__body 
+                .p-scene__about
+                  .p-scene__about__texts 
+                    h4.__title 箱・ラッピングについて(無料・有料) 
+                    p.__text 仮) このような箱・ラッピングでお届けします。
+                      br 
+                      |ご希望の方はオプションメニューから選択or商品ご購入時、備考欄にご記入ください。ラッピングはカート内で選択可。
+                  .p-scene__about__visual
+                    .__img( style="background-image: url(../img/scene.png)") 
+                .p-scene__about
+                  .p-scene__about__texts 
+                    h4.__title 熨斗・名入れについて(無料) 
+                    p.__text 用途に合わせてお選び頂けます。ご注文の際にカート内よりお選びください。
+                  .p-scene__about__visual
+                    .__img( style="background-image: url(../img/scene.png)")       
+          a.c-link(href="#") 詳しく見る
+            span.c-link__next 
+              img(src="../img/arrow.svg", alt="")
+
+        section.l-guidance#guidance
+          .p-guidance__inner 
+            .p-guidance__announcement
+              .p-guidance__announcement__inner 
+                h3.p-guidance__announcement__title 業者の方
+                  br
+                  |はこちら
+            .p-guidance__inner__wrapper 
+              .p-guidance__texts 
+                h2.p-guidance__title 
+                  span.p-guidance__title__strong 卸
+                  span.p-guidance__title__strong 売
+                  |のご案内
+                p.p-guidance__text ホテルや飲食店など、多数の納入実績！
+                  br
+                  |確かな品質とこだわりの鮮度、豊富なノウハウでサポート致します！
+              a.c-link.__left(href="#") 詳しく見る
+                span.c-link__next 
+                  img(src="../img/arrow.svg", alt="")
+
+              .p-guidance__visual 
+                img(src="../img/info.png", alt="")
+
+
+
+        section.l-desc#desc 
+          .p-desc__inner 
+            h2.p-desc__title コリヤンハウスについて
+            .p-desc__inner__wrapper 
+              .p-desc__hero 
+                .p-desc__hero__visual 
+                  .__img 
+                .p-desc__hero__texts 
+                  p.__text 鮮度と味に自信あり！
+                  p.__text 精肉のプロが厳選した
+                  p.__text お肉をお手頃価格で
+                  p.__text ご提供。
+                  p.__text 普段のご自宅用から、
+                  p.__text 特別な日のギフト用
+                  p.__text まで、豊富な種類を
+                  p.__text ご用意しています。
+                  p.__text お肉のことならなんで
+                  p.__text もお任せください！
+              .p-desc__info 
+                h3.p-desc__info__title コリヤンハウス精肉総合食材工場
+                p.p-desc__info__text 〒920-0025　石川県金沢市駅西本町4丁目3番5号
+                p.p-desc__info__text 電話番号 : 
+                  span.__bold 076-232-5333  
+                  |/  ファックス : 
+                  span.__bold 076-231-7632
+                p.p-desc__info__text 営業時間 : 
+                  span.__bold 6:00〜17:00
+                p.p-desc__info__text 定休日 : 
+                  span.__bold 日曜・水曜 (祝日のある水曜は営業)
+          a.c-link(href="#") 詳しく見る
+            span.c-link__next 
+              img(src="../img/arrow.svg", alt="")
+
+
+
+

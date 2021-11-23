@@ -1,0 +1,191 @@
+extends _layout
+block var
+  - metas = {}
+  - metas.title = 'title'
+  - metas.url = 'url'
+  - metas.image = 'image'
+  - metas.site_name = 'site_name'
+  - metas.description = 'description'
+  - var slug = 'index'
+block append meta
+  +meta(metas)
+  include common/_inc_meta_facebook
+  +inc_meta_facebook(metas)
+block title
+  title
+block body
+
+block PageContent
+  main.l-main
+    .l-main__container.__sale
+      .l-main__area.__sale
+        section.p-page__hero 
+          .p-page__hero__inner.__sale 
+            .p-page__hero__visual.__sale 
+              .p-page__hero__img.__sale(style="background-image: url(../img/sale/sale_hero.jpg)") 
+                - var PageTitle = '食肉卸売のご案内'
+                  h2.p-page__hero__title #{PageTitle}
+
+        section.p-sale__intro
+          h2.p-sale__intro__title__content 
+            span.__title こんなお悩みありませんか？
+          .p-sale__intro__content
+            .p-sale__intro__content__inner 
+              .p-sale__intro__content__box.__left 
+                .p-sale__intro__content__texts.__right 
+                  p.__text
+                    span.__strong コスト
+                    |を上げずにお肉の
+                    span.__strong 品質
+                    |をあげたい！
+                .p-sale__intro__content__texts.__left 
+                  p.__text
+                    span.__strong 豊富
+                    |な種類の商品から選びたい！
+                img.__left(src="../img/sale/intro1.png", alt="")
+              .p-sale__intro__content__box.__right 
+                .p-sale__intro__content__texts.__right
+                  p.__text.__large
+                    span.__strong レシピ
+                    |や
+                    span.__strong ノウハウ
+                    |の提案もして欲しい！
+                .p-sale__intro__content__texts.__left 
+                  p.__text 調理前の下準備の
+                    span.__strong 手間
+                    |を減らしたい！
+                img.__right(src="../img/sale/intro2.png", alt="")
+
+        section.p-sale__reason 
+          p.p-sale__reason__sub__title ホテルや飲食店への納入・提携実績多数！
+          h2.p-sale__reason__main__title コリヤンハウスが選ばれる理由
+          .p-sale__reason__content 
+            .p-sale__reason__content__box 
+              .p-sale__reason__content__texts 
+                span.p-sale__reason__content__number 1
+                h3.p-sale__reason__content__title 安心・安全・美味しいお肉
+                p.p-sale__reason__content__text 徹底的な品質管理で安心・安全、独自の下処理を行い美味しいお肉をご用意。他社様には真似のできないコストパフォーマンスで
+                  br
+                  |ご提供致します。
+              img.__right(src="../img/sale/reason1.png", alt="")
+            .p-sale__reason__content__box 
+              .p-sale__reason__content__texts 
+                span.p-sale__reason__content__number 2
+                h3.p-sale__reason__content__title 飲食店経営の豊富なノウハウ
+                p.p-sale__reason__content__text 自社で飲食店を経営。
+                  br
+                  |10年以上培った現場目線と食肉卸のプロ目線で、
+                  br
+                  |お客様の目的に合わせより具体的なご提案やサポートが可能です。
+              img.__left(src="../img/sale/reason2.png", alt="")
+            .p-sale__reason__content__box 
+              .p-sale__reason__content__texts 
+                span.p-sale__reason__content__number 3
+                h3.p-sale__reason__content__title 細かなオーダーメイドに対応
+                p.p-sale__reason__content__text 成形・スライス・ポーションカットなど、
+                  br
+                  |他社では難しいオーダーメイドにも対応。
+                  br
+                  |下準備不要で「あとは焼くだけ」ということも可能です。
+              img.__right.__bottom(src="../img/sale/reason3.png", alt="")
+
+        section.p-sale__hand 
+          p.p-sale__hand__sub__title 豊富な品揃えで商品をサポート！
+          h2.p-sale__hand__main__title 取扱商品
+          .p-sale__hand__content 
+            ul.p-sale__hand__content__list 
+              li.p-sale__hand__content__item 
+                .p-sale__hand__content__visual 
+                  img(src="../img/sale/mirt_kind1.jpg", alt="")
+                  div.p-sale__hand__name.__red
+                    span.__text 牛
+                    span.__text 肉
+                p.p-sale__hand__content__text 高級和牛からお手頃な輸入牛まで様々なお肉を取り扱っています。
+              li.p-sale__hand__content__item 
+                .p-sale__hand__content__visual 
+                  img(src="../img/sale/mirt_kind1.jpg", alt="")
+                  div.p-sale__hand__name.__green
+                    span.__text 豚
+                    span.__text 肉
+                p.p-sale__hand__content__text 食肉専門店ならではの品揃えでバラ・ロース・ヒレなど各部位を取り揃えています。
+              li.p-sale__hand__content__item 
+                .p-sale__hand__content__visual 
+                  img(src="../img/sale/mirt_kind1.jpg", alt="")
+                  div.p-sale__hand__name.__red
+                    span.__text 鶏
+                    span.__text 肉
+                p.p-sale__hand__content__text 調理方法に合わせて最適なお肉をご提案します。
+              li.p-sale__hand__content__item 
+                .p-sale__hand__content__visual 
+                  img(src="../img/sale/mirt_kind1.jpg", alt="")
+                  div.p-sale__hand__name.__green
+                    span.__text.__upper-narrow そ
+                    span.__text.__upper-narrow の
+                    span.__text.__upper-narrow 他
+                p.p-sale__hand__content__text 韓国食材や各種ホルモンなど、こだわりの商品もご用意しています。
+
+        section.p-sale__consultation
+          .p-sale__consultation__inner 
+            .p-sale__consultation__catch 
+              .p-sale__consultation__catch__inner 
+                p.p-sale__consultation__catch__title お見積り
+                  br
+                  span.__large 無料!
+                  
+            .p-sale__consultation__title 
+              h2.__title 
+                span.__strong ま
+                span.__strong ず
+                span.__strong は
+                span.__text お気軽にご相談ください！
+            .p-sale__consultation__content 
+              .p-sale__consultation__heading
+                .p-sale__consultation__heading__box 
+                  img(src="../img/sale/stake.svg", alt="")
+                  p.p-sale__consultation__heading__name 種類
+                .p-sale__consultation__heading__box 
+                  img(src="../img/sale/gama.svg", alt="")
+                  p.p-sale__consultation__heading__name 予算
+                .p-sale__consultation__heading__box 
+                  img(src="../img/sale/metaer.svg", alt="")
+                  p.p-sale__consultation__heading__name 購入量
+                p.__text など、
+              h3.p-sale__consultation__heading__title お客様のご要望に応じてご提案いたします！
+              .p-sale__consultation__body
+                .p-sale__consultation__body__content 
+                  .p-sale__consultation__body__box.__left
+                    dl.p-sale__consultation__body__texts 
+                      dt.__title 24時間受付
+                      dd.__text.__large FAX：076-231-7632
+                    dl.p-sale__consultation__body__texts 
+                      dt.__title 営業日のみ
+                      dd.__text.__small TEL : 076-232-5333
+                        br
+                        span.__text.__s-small 受付時間 : 6:00〜17:00  /  定休日 : 日・水曜
+                  .p-sale__consultation__body__box.__right
+                    dl.p-sale__consultation__body__texts 
+                      dt.__title.__circle 24時間
+                        br
+                        |受付
+                      dd.__text お問い合わせフォーム
+
+
+        section.p-sale__info 
+          h2.p-sale__info__title 会社情報
+          .p-sale__info__inner 
+            .p-about__desc__content 
+              .p-about__desc__content__visual 
+                .__img.__uncircle 
+              .p-about__desc__content__texts 
+                h3.p-about__desc__texts__title コリヤンハウス精肉総合食材工場
+                p.p-about__desc__text 〒920-0025　石川県金沢市駅西本町4丁目3番5号
+                p.p-about__desc__text 電話番号 : 
+                  span.__bold 076-232-5333
+                p.p-about__desc__text ファックス : 
+                  span.__bold 076-231-7632
+                p.p-about__desc__text 営業時間 : 
+                  span.__bold 6:00〜17:00　
+                p.p-about__desc__text 定休日 : 
+                  span.__bold 日曜・水曜 (祝日のある水曜は営業)
+            .p-about__desc__map 
+              iframe.__uncircle(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51274.06194232945!2d136.57744696761324!3d36.563060549223586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8334ef5b597df%3A0x18869b75ca730d86!2z77yI5qCq77yJ44Kz44Oq44Ok44Oz44OP44Km44K5!5e0!3m2!1sja!2sjp!4v1636959062316!5m2!1sja!2sjp", frameborder="0") 
